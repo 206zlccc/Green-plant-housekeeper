@@ -1,0 +1,22 @@
+<!--start.wxml-->
+
+<button class="btn1" bindtap="getDataFromOneNet">
+绿植管家</button>
+
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label style="display: flex"  wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+
+
+<input id="input" placeholder="输入最适温度" 
+placeholder-style="font-size:15px; color:#808080;" 
+style="font-weight:bolder; font-size:15px; color:#808080; padding-left: 30rpx"
+  bindinput="change"/>
+
+<text id="text">提示：当目前温度与最适温度相差超过5℃时报警</text>
+<button id="btn3" style="opacity: {{opacity}}" 
+disabled="{{disabled}}" bindtap="send">发送请求</button>
