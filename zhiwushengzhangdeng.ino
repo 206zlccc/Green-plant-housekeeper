@@ -1,6 +1,6 @@
 int a=600;   //补光光强
 int b=100;  //报警光强
-int c=900;
+int c=900;   //补充光强
 
 void setup( ) {
   Serial.begin(115200);           //串口初始化
